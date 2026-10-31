@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ScrollingFog2
+  m_Shader: {fileID: 4800000, guid: c0c400d98dedc8141a5e0c52e78dd5ec, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _DetailTex:
+        m_Texture: {fileID: 2800000, guid: 4a19648f8f1df4e42a50291efccc6080, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 391e7578463b14a42a458ef4ac373eb9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTex:
+        m_Texture: {fileID: 2800000, guid: 4a19648f8f1df4e42a50291efccc6080, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Contrast: 3.5
+    - _Density: 0.55
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _FogColor: {r: 1, g: 0.7121002, b: 0.4669811, a: 1}
+    - _ScrollSpeed: {r: 0.01, g: 0.001, b: 0, a: 0}
+    - _Speed: {r: 0.05, g: 0.01, b: 0, a: 0}
+    - _SpeedA: {r: 0.02, g: 0.01, b: 0, a: 0}
+    - _SpeedB: {r: -0.01, g: 0.015, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
