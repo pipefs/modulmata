@@ -2559,12 +2559,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TransitionManager
   screenFade: {fileID: 1093394657}
   sceneColor: {r: 0, g: 0, b: 0, a: 1}
-  sceneCoverDuration: 0.3
+  sceneCoverDuration: 0.5
   sceneRevealDuration: 1
   initialRevealDuration: 1
-  doorCoverDuration: 0.08
-  doorHoldDuration: 0.08
-  doorRevealDuration: 0.35
+  doorCoverDuration: 0.4
+  doorHoldDuration: 0.5
+  doorRevealDuration: 0.4
   victoryCoverDuration: 1
 --- !u!1 &1633530424
 GameObject:

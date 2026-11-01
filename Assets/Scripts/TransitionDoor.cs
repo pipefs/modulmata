@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -9,6 +10,8 @@ public class TransitionDoor : MonoBehaviour, IPlayerInteractable
     [SerializeField] private Vector2 exitOffset = new Vector2(2f, 0f);
     [SerializeField] private bool requiresSurfaceKey;
     [SerializeField] private bool activatesFinalCamera;
+    [SerializeField] private Rigidbody2D rbCandado;
+
     [Header("Interacción")]
     [SerializeField] private TextMeshPro prompt;
     [SerializeField, Min(0f)] private float promptFadeDuration = 0.15f;
@@ -119,6 +122,7 @@ public class TransitionDoor : MonoBehaviour, IPlayerInteractable
         }
 
         var manager = GameManager.Instance;
+        
         if (requiresSurfaceKey && !manager.HasFinalKey)
         {
             if (audioSource != null && lockedSound != null)
@@ -128,6 +132,12 @@ public class TransitionDoor : MonoBehaviour, IPlayerInteractable
 
             return false;
         }
+
+        if (rbCandado != null)
+        {
+            rbCandado.simulated = true;
+        }
+
         if (!manager.BeginDoorTransition(destination.transform.position + (Vector3)destination.exitOffset, activatesFinalCamera))
         {
             return false;
@@ -135,10 +145,17 @@ public class TransitionDoor : MonoBehaviour, IPlayerInteractable
 
         if (audioSource != null && transitionSound != null)
         {
-            audioSource.PlayOneShot(transitionSound);
+            StartCoroutine(DelayTransitionSound());
         }
 
         return true;
+    }
+    
+    private IEnumerator DelayTransitionSound()
+    {
+        yield return new WaitForSeconds(0.15f);
+        audioSource.PlayOneShot(transitionSound);
+
     }
 
     private void OnDisable()

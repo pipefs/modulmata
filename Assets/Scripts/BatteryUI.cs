@@ -11,7 +11,6 @@ public class BatteryUI : MonoBehaviour
     public Image moduleIcon;
     public Image usesBar;
     public TMP_Text moduleNameText;
-    public Sprite[] abilityIcons;
 
     private GameManager manager;
     private BatterySystem battery;
@@ -89,11 +88,6 @@ public class BatteryUI : MonoBehaviour
 
         if (moduleIcon != null)
         {
-            if (abilityIcons == null && abilityIcons.Length <= 0)
-            {
-                return;
-            }
-
             Sprite icon = module.icon;
 
             if (icon != null && moduleIcon.sprite != icon)

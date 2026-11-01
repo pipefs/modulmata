@@ -95,6 +95,50 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   multiSpriteImportData: []
   layeredSpriteImportData:
+  - name: Cerradura
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 34
+      y: 4
+      width: 12
+      height: 14
+    spriteID: af7b3d34a8cd1c94681b4f70d51672b6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 34, y: 4}
+    spritePosition: {x: 10, y: 12}
+  - name: Llave
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 34
+      y: 26
+      width: 12
+      height: 14
+    spriteID: 8075b545d5b6fc240ad37920a6357079
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 34, y: 26}
+    spritePosition: {x: 10, y: 12}
   - name: Cel
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -164,7 +208,7 @@ ScriptedImporter:
   characterMode: 0
   documentPivot: {x: 0, y: 0}
   documentAlignment: 7
-  importHiddenLayers: 0
+  importHiddenLayers: 1
   layerMappingOption: 2
   generatePhysicsShape: 0
   paperDollMode: 0
@@ -188,6 +232,26 @@ ScriptedImporter:
   resliceFromLayer: 1
   pSDLayerImportSetting: []
   psdLayers:
+  - name: Cerradura
+    spriteName: Cerradura
+    isGroup: 0
+    parentIndex: -1
+    spriteID: af7b3d34a8cd1c94681b4f70d51672b6
+    layerID: 10
+    mosaicPosition: {x: 34, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Llave
+    spriteName: Llave
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8075b545d5b6fc240ad37920a6357079
+    layerID: 9
+    mosaicPosition: {x: 34, y: 26}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
   - name: Cel
     spriteName: Cel
     isGroup: 0
@@ -197,7 +261,7 @@ ScriptedImporter:
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1
-    isVisible: 1
+    isVisible: 0
   mosaicPSDLayers: []
   rigPSDLayers: []
   sharedRigPSDLayers: []
