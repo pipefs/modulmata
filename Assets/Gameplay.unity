@@ -7052,8 +7052,8 @@ MonoBehaviour:
   deathCameraTarget: {fileID: 932531662}
   tvOffTransition: {fileID: 1491117311}
   respawnFadeOutColor: {r: 0, g: 0.8, b: 1, a: 0.8}
-  tvOffClip: {fileID: 0}
   respawnClip: {fileID: 8300000, guid: 2135624b430931d428f248cdaa3b80a9, type: 3}
+  bossKeyPrefab: {fileID: 6453512024772702520, guid: 26d3e4969b747294e996dd345b368797, type: 3}
   finalCamera: {fileID: 247337685}
   finalCameraPriorityOffset: 20
 --- !u!4 &719297008
@@ -78318,7 +78318,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1378004652945249914, guid: 07bc062ec31d37b4c92c3e6274ba3dec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

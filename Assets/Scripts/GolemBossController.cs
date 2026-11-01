@@ -5,25 +5,25 @@ using UnityEngine;
 // Gollux conserva la física y las capacidades comunes del gólem.
 public class GolemBossController : GolemController
 {
+    [Header("Ref")]
+    public Transform keySpawnPoint;
+
     [Header("Ataque B")]
     [SerializeField] private string attackBState = "AttackB";
     [SerializeField, Min(0f)] private float attackBDamage = 22f;
     [SerializeField, Min(0f)] private float attackBRecovery = 1.6f;
 
-    [Header("Apertura del impacto")]
-    [Tooltip("Segundos de juego desde el inicio del ataque. Considerar la velocidad del Animator; no son segundos del clip.")]
+    [Header("Impactos")]
     [SerializeField, Min(0f)] private float attackAOpensAt = 0.5f;
-    [Tooltip("Segundos de juego desde el inicio del ataque. Considerar la velocidad del Animator; no son segundos del clip.")]
     [SerializeField, Min(0f)] private float attackBOpensAt = 0.41666666f;
 
-    [Header("Dash de persecución y salida del punto ciego")]
+    [Header("Dash")]
     [SerializeField, Min(0f)] private float catchUpDashSpeed = 12f;
     [SerializeField, Min(0.01f)] private float stalledDistanceTime = 0.4f;
     [SerializeField, Min(0f)] private float catchUpMinimumGap;
     [SerializeField, Min(0f)] private float catchUpMaximumGap = 4f;
     [SerializeField, Min(0f)] private float catchUpDashDuration = 0.22f;
     [SerializeField, Min(0f)] private float catchUpDashCooldown = 2f;
-    [Tooltip("Separación a la que termina la persecución. El punto ciego se detecta por solapamiento de los colliders.")]
     [SerializeField, Min(0f)] private float catchUpDashStopDistance = 0.2f;
     [SerializeField, Min(0f)] private float minimumPlayerRunSpeed = 1f;
     [SerializeField, Min(0f)] private float playerMovementMemory = 0.55f;
@@ -31,7 +31,7 @@ public class GolemBossController : GolemController
     [SerializeField, Min(0f)] private float blockedBeforeFleeTime = 0.12f;
     [SerializeField] private Color catchUpDashGhostColor = new Color(0.5f, 0.95f, 1f, 0.42f);
 
-    [Header("Áreas del jefe (coordenadas locales)")]
+    [Header("Hurtbox & Hitbox")]
     [SerializeField] private Vector2 hurtboxOffset = new Vector2(0f, -0.5f);
     [SerializeField] private Vector2 hurtboxSize = new Vector2(5f, 7f);
     [SerializeField] private Vector2 heavyAttackOffset = new Vector2(3.5f, -3f);

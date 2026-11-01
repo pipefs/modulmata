@@ -246,7 +246,33 @@ public class BossArena : MonoBehaviour
 
         if (gameManager != null)
         {
-            gameManager.GrantFinalKey();
+            //gameManager.GrantFinalKey();
+
+            // Instanciar llave.
+            if (gameManager.bossKeyPrefab != null)
+            {
+                if (boss.keySpawnPoint == null)
+                {
+                    Debug.LogError("BossArena no puede crear la llave: falta Key Spawn Point en el jefe.", boss);
+                }
+                else
+                {
+                    GameObject bossKey = Instantiate(gameManager.bossKeyPrefab, boss.keySpawnPoint.position, gameManager.bossKeyPrefab.transform.rotation);
+
+                    Rigidbody2D bossKeyRb = bossKey.GetComponentInChildren<Rigidbody2D>();
+                    
+                    if (bossKeyRb != null)
+                    {
+                        float horizontalDirection = Random.value < 0.5f ? -1f : 1f;
+                        bossKeyRb.linearVelocity = new Vector2(horizontalDirection * 4, 10);
+                        bossKeyRb.WakeUp();
+                    }
+                    else
+                    {
+                        Debug.LogError("La llave del jefe necesita un Rigidbody2D para recibir el impulso.", bossKey);
+                    }
+                }
+            }
 
             if (gameManager.ActiveArena == this)
             {

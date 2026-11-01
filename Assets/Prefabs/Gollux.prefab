@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1841423764224614932
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2286673198176783409}
+  m_Layer: 7
+  m_Name: Key Spawn Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2286673198176783409
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841423764224614932}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1497019476024321001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2379551980779426357
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,6 +179,7 @@ Transform:
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2286673198176783409}
   - {fileID: 5924928230369597926}
   - {fileID: 6115552424412245971}
   m_Father: {fileID: 0}
@@ -254,7 +286,7 @@ MonoBehaviour:
   groundProbeWidth: 0.25
   wallProbeOffset: {x: -1, y: 0}
   turnDeadZone: 0.2
-  onDied:
+  OnDied:
     m_PersistentCalls:
       m_Calls: []
   durabilityPickupPrefab: {fileID: 0}
@@ -266,6 +298,7 @@ MonoBehaviour:
   dieState: Die
   hurtDuration: 0.25
   hurtRetaliationDelay: 0.15
+  keySpawnPoint: {fileID: 2286673198176783409}
   attackBState: AttackB
   attackBDamage: 22
   attackBRecovery: 0

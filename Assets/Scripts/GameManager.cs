@@ -25,10 +25,13 @@ public class GameManager : MonoBehaviour
     [Header("Muerte")]
     [SerializeField] private TVOffTransition tvOffTransition;
     [SerializeField] private Color respawnFadeOutColor = Color.black;
-    [SerializeField] private AudioClip tvOffClip;
+    //[SerializeField] private AudioClip tvOffClip;
 
     [Header("Respawn")]
     [SerializeField] private AudioClip respawnClip;
+
+    [Header("Jefe")]
+    public GameObject bossKeyPrefab;
 
     [Header("Final")]
     [SerializeField] private CinemachineCamera finalCamera;
